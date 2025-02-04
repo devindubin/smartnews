@@ -1,0 +1,21 @@
+@startuml
+
+actor User
+entity "Frontend (React)" as Frontend
+entity "Backend (Node.js + Express)" as Backend
+database "MongoDB" as Database
+entity "News APIs" as NewsAPI
+entity "Fact-Checking APIs" as FactCheckAPI
+entity "Sentiment Analysis APIs" as SentimentAPI
+
+User --> Frontend : Requests articles
+Frontend --> Backend : Sends API request
+Backend --> NewsAPI : Fetches articles
+Backend --> FactCheckAPI : Retrieves trust score
+Backend --> SentimentAPI : Analyzes sentiment
+Backend --> Database : Stores processed data
+Database --> Backend : Retrieves stored data
+Backend --> Frontend : Sends formatted data
+Frontend --> User : Displays news, sentiment, and ranking
+
+@enduml
