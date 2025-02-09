@@ -1,4 +1,4 @@
-@startuml
+@startuml main
 
 actor User
 entity "Frontend (React)" as Frontend
@@ -17,5 +17,18 @@ Backend --> Database : Stores processed data
 Database --> Backend : Retrieves stored data
 Backend --> Frontend : Sends formatted data
 Frontend --> User : Displays news, sentiment, and ranking
+
+@enduml
+
+@startuml NewsAPI
+
+entity "News Source" as Source
+entity "RSS Feed" as RSSFeed
+entity "Backend" as Backend
+database "Database" as Database
+
+Source --> RSSFeed: News source publishes articles to their RSSFeed
+RSSFeed --> Backend: Backend polls RSSFeed for new articles. 
+Backend --> Database: Article saved.
 
 @enduml
