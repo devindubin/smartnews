@@ -5,25 +5,20 @@ import { useState } from "react";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { v4 as uuid } from "uuid";
 import ArticleModal from "./ArticleModal";
+import { useNews } from "../../hooks/useNews";
 
 const MainFeed = () => {
   const axiosPrivate = useAxiosPrivate();
-  const [myData, setMyData] = useState([]);
-  useEffect(() => {
-    const getPosts = async () => {
-      const posts = await axiosPrivate.get("/news/articles");
-      console.log("posts", posts);
-      setMyData(posts.data.articles);
-    };
-    getPosts();
-  }, []);
+
+  const { articles } = useNews();
+
   return (
     <div>
       MainFeed
       <div className="main-feed">
-        {myData &&
-          myData.map((row, ind) => {
-            return <FeedItem key={uuid()} {...row} />;
+        {articles &&
+          articles.map((row, ind) => {
+            return <FeedItem key={row.id} {...row} />;
           })}
       </div>
     </div>

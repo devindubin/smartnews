@@ -1,7 +1,8 @@
 import React from "react";
 import ArticleModal from "./ArticleModal";
-
+import { useNavigate } from "react-router-dom";
 const FeedItem = ({
+  id,
   author,
   title,
   description,
@@ -9,8 +10,18 @@ const FeedItem = ({
   publishedAt,
   content,
 }) => {
+  const navigate = useNavigate();
+  const openArticle = async () => {
+    navigate(`/feed/${id}`);
+  };
+
   return (
-    <div className="item-wrapper">
+    <div
+      className="item-wrapper"
+      onDoubleClick={() => {
+        openArticle({ id });
+      }}
+    >
       <div className="left-box">
         <div className="article-meta">
           <h1 className="article-author">Title: {title}</h1>

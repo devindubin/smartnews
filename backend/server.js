@@ -11,12 +11,13 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { credentials } from "./middlewares/credentials.js";
 import { verifyJWT } from "./middlewares/verifyJWT.js";
+import { getArticlesOnSchedule } from "./controllers/newsControllers.js";
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 
 connectDB();
-
+getArticlesOnSchedule();
 app.use(credentials);
 app.use(
   cors({

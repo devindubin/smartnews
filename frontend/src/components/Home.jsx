@@ -8,7 +8,12 @@ const Home = () => {
   const content = (
     <div className="intro-screen">
       <div className="half-banner">
-        <img src="https://placehold.co/600x400" alt="" />
+        <img
+          src="https://placehold.co/600x400"
+          alt=""
+          width={600}
+          height={400}
+        />
       </div>
       <div className="welcome-modal">
         <section>

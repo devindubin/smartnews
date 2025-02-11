@@ -4,12 +4,13 @@ import viteLogo from "/vite.svg";
 import { Routes, Route } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
-
+import NewsProvider from "./context/NewsProvider";
 import MainFeed from "./components/feed/MainFeed";
 import Home from "./components/Home";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
 import PersistentLogin from "./components/PersistentLogin";
+import ArticleModal from "./components/feed/ArticleModal";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -20,16 +21,30 @@ function App() {
         <Route path="login" element={<LoginForm />} />
         <Route path="register" element={<RegisterForm />} />
         <Route element={<PersistentLogin />}>
+          {/* <Route element={<NewsProvider />}> */}
           <Route
             path="feed"
             element={
               <ProtectedRoute>
-                <MainFeed />
+                <NewsProvider>
+                  <MainFeed />
+                </NewsProvider>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="feed/:id"
+            element={
+              <ProtectedRoute>
+                <NewsProvider>
+                  <ArticleModal />
+                </NewsProvider>
               </ProtectedRoute>
             }
           />
         </Route>
       </Route>
+      {/* </Route> */}
     </Routes>
   );
 }
