@@ -27,9 +27,9 @@ const RegisterForm = () => {
   };
 
   return (
-    <div>
+    <div className="register-page">
       <h1>RegisterForm</h1>
-      <form onSubmit={(e) => onSubmit(e)}>
+      <form className="auth-form" onSubmit={(e) => onSubmit(e)}>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
