@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_PROD_URL || "http://localhost:5000";
+const BASE_URL = "https://smartnews-5q5f.onrender.com"; //|| "http://localhost:5000";
 
 export default axios.create({
   baseURL: BASE_URL,
