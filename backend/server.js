@@ -27,7 +27,7 @@ getArticlesOnSchedule();
 app.use(credentials);
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://smartnews-frontend.onrender.com",
     optionsSuccessStatus: 200,
   })
 );
