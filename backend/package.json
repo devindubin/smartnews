@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^4.1.0",
     "@mozilla/readability": "^0.5.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
