@@ -1,5 +1,5 @@
 {"scripts": {
-  "renderbuild": "cd frontend/ && npm install && cd .. && cd backend/ && npm install && cd ..",
+  "renderbuild": "npm install && cd frontend/ && npm install && cd .. && cd backend/ && npm install && cd ..",
   "vitebuild": "cd frontend/ && npm run build && cd ..",
   "prodstart": "cd backend/ && npm run start"
 },
