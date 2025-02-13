@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children }) => {
   if (!auth?.accessToken) {
     console.log("user not authenticated");
     //user is not authenticated
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/" state={{ from: location }} replace />;
   }
   return children;
 };
