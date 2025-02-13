@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 getArticlesOnSchedule();
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.use(credentials);
 app.use(

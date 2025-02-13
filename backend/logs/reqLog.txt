@@ -502,3 +502,8 @@
 20250213	12:52:58	a409a08e-d84f-46ed-90f9-f3cd449b3d0c	POST	http://localhost:5000	/auth/login
 20250213	12:54:38	b824321a-8ae3-4efb-b7af-4b5e7dbb964a	POST	http://localhost:5000	/auth/login
 20250213	12:54:38	ffb8da3c-ec5a-43ba-8aa2-7460f2aae595	GET	undefined	/news/articles
+20250213	14:14:08	9b2de830-43e1-464f-99f9-17388e9190ab	POST	http://localhost:5000	/auth/login
+20250213	14:14:08	1485b245-12d9-4f64-a1c8-4635702bb00e	GET	undefined	/news/articles
+20250213	14:14:18	44aaf339-63d0-4399-a04d-5aa2533ec06b	GET	undefined	/feed
+20250213	14:14:18	6741cb35-6316-44df-ab08-3e43d1c7169e	GET	undefined	/favicon.ico
+20250213	14:14:28	df4bd82f-df6c-4051-a660-ee1f52aa9bc1	GET	undefined	/favicon.ico
