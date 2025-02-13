@@ -6,7 +6,7 @@ import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import NewsProvider from "./context/NewsProvider";
 import MainFeed from "./components/feed/MainFeed";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Layout from "./components/Layout";
 import PersistentLogin from "./components/PersistentLogin";
@@ -18,10 +18,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="login" element={<LoginForm />} />
         <Route path="register" element={<RegisterForm />} />
         <Route element={<PersistentLogin />}>
-          {/* <Route element={<NewsProvider />}> */}
           <Route
             path="feed"
             element={

@@ -499,3 +499,6 @@
 20250209	14:42:25	4dcf1340-a13c-461c-88c2-ae26859ae75f	GET	http://localhost:5173	/news/articles
 20250209	14:42:25	117992e3-8047-4272-9a82-06f269504319	GET	http://localhost:5173	/auth/refresh
 20250209	14:42:25	71508a9d-7c16-4b10-90b7-b71ca31ea929	GET	http://localhost:5173	/auth/refresh
+20250213	12:52:58	a409a08e-d84f-46ed-90f9-f3cd449b3d0c	POST	http://localhost:5000	/auth/login
+20250213	12:54:38	b824321a-8ae3-4efb-b7af-4b5e7dbb964a	POST	http://localhost:5000	/auth/login
+20250213	12:54:38	ffb8da3c-ec5a-43ba-8aa2-7460f2aae595	GET	undefined	/news/articles

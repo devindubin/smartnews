@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,10 +36,10 @@ const LoginForm = () => {
     localStorage.setItem("persist", persist);
   }, [persist]);
   return (
-    <div>
+    <>
       <h1>LoginForm</h1>
       {errMsg && <p style={{ color: "red" }}>{errMsg}</p>}
-      <form onSubmit={handleSubmit}>
+      <form className="auth-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -64,9 +64,14 @@ const LoginForm = () => {
           />
           <label htmlFor="persist">Trust This Device</label>
         </div>
+        <br />
+        <p>
+          Dont Have An Account? <Link to="/register">Sign Up</Link>
+        </p>
+        <br />
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </>
   );
 };
 
