@@ -21,7 +21,11 @@
     "express": "^4.21.2",
     "jsdom": "^26.0.0",
     "mongodb": "^6.13.0",
-    "mongoose": "^8.9.6"
+    "mongoose": "^8.9.6",
+    "axios": "^1.7.9",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^11.0.5",
+    "bcrypt": "^5.1.1"
   },
   "prettier": {}
 }
