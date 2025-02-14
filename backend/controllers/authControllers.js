@@ -49,7 +49,7 @@ export const handleLogin = async (req, res) => {
     const refreshToken = jwt.sign(
       { username: user.username },
       process.env.REFRESH_SECRET_KEY,
-      { expiresIn: process.env.ACCESS_EXP }
+      { expiresIn: process.env.REFRESH_EXP }
     );
     user.accessToken = accessToken;
     user.refreshToken = refreshToken;

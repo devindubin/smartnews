@@ -27,7 +27,7 @@ getArticlesOnSchedule();
 app.use(credentials);
 app.use(
   cors({
-    origin: "https://smartnews-frontend.onrender.com",
+    origin: "https://www.smrtnews.org/",
     optionsSuccessStatus: 200,
   })
 );
