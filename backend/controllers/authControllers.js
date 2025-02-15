@@ -81,6 +81,7 @@ export const handleLogout = async (req, res) => {
   const user = await User.findOne({ refreshToken }).exec();
   if (!user) {
     res.clearCookie("jwt", {
+      domain: ".smrtnews.org",
       partition: true,
       httpOnly: true,
       sameSite: "None",
