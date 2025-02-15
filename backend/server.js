@@ -49,8 +49,8 @@ app.use("/posts", postRouter);
 app.use("/news", newsRouter);
 
 app.all("*", (req, res) => {
-  res.status(404);
-  res.json({ message: "404 Not Found" });
+  res.status(304);
+  res.redirect("/");
 });
 
 app.use(errorHandler);
