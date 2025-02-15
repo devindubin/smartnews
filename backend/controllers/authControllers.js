@@ -96,7 +96,13 @@ export const handleLogout = async (req, res) => {
   const result = await user.save();
   console.log(result);
 
-  res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+  res.clearCookie("jwt", {
+    domain: ".smrtnews.org",
+    partition: true,
+    httpOnly: true,
+    sameSite: "None",
+    secure: true,
+  });
   res.sendStatus(204);
 };
 
