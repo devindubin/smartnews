@@ -23,7 +23,7 @@ connectDB();
 getArticlesOnSchedule();
 
 // app.use(express.static(path.join(__dirname, "../frontend/dist")));
-
+app.set("trust proxy", 1);
 app.use(credentials);
 app.use(
   cors({
