@@ -57,6 +57,7 @@ export const handleLogin = async (req, res) => {
     console.log(result);
     //creates secure cookie with refresh token
     res.cookie("jwt", refreshToken, {
+      domain: ".onrender.com",
       httpOnly: true,
       secure: true,
       sameSite: "None",
