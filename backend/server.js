@@ -48,7 +48,7 @@ app.use(verifyJWT);
 app.use("/posts", postRouter);
 app.use("/news", newsRouter);
 
-app.all("*", (req, res) => {
+app.all("/*", (req, res) => {
   res.status(304);
   res.redirect("/");
 });
