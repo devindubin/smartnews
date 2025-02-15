@@ -59,7 +59,7 @@ export const handleLogin = async (req, res) => {
     res.cookie("jwt", refreshToken, {
       path: "/",
       domain: ".smrtnews.org",
-      partitioned: true,
+      // partitioned: true,
       httpOnly: true,
       secure: true,
       sameSite: "None",
