@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.get("/", (req, res) => {
-  if (req.headers.accept.includes("text/html")) {
+  if (req.headers?.accept?.includes("text/html")) {
     res.send("Hello World");
   } else {
     res.json({ message: "Hello World" });
