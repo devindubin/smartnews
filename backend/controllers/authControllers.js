@@ -80,7 +80,12 @@ export const handleLogout = async (req, res) => {
   // is refreshToken in database?
   const user = await User.findOne({ refreshToken }).exec();
   if (!user) {
-    res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+    res.clearCookie("jwt", {
+      partition: true,
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+    });
     return res.sendStatus(204);
   }
 
