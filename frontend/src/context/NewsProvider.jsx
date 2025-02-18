@@ -12,7 +12,7 @@ const NewsProvider = ({ children }) => {
   useEffect(() => {
     const getArticles = async () => {
       const posts = await axiosPrivate.get("/news/articles");
-      console.log("posts", posts);
+
       const news = posts.data.articles;
       const idArticles = news.map((article) => {
         const ID = uuid();

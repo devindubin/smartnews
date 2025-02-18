@@ -3,11 +3,8 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const handleRegister = async (req, res) => {
-  // console.log(req.username);
-  console.log(req.body);
   const { username, password } = req.body;
   //check fields are present
-  console.log(username, password);
 
   //check for duplicates
 
@@ -15,7 +12,7 @@ export const handleRegister = async (req, res) => {
   try {
     const hashedPwd = await bcrypt.hash(password, 10);
     const user = await User.create({ username, password: hashedPwd });
-    console.log(user);
+
     return res
       .status(201)
       .json({ message: "New user created", data: JSON.stringify(user) });
@@ -26,18 +23,17 @@ export const handleRegister = async (req, res) => {
 export const handleLogin = async (req, res) => {
   const { username, password } = req.body;
   // check fields are present
-  console.log("Username", username);
+
   //check user exists
   const user = await User.findOne({ username }).exec();
-  console.log("Found User", user);
+
   if (!user) {
-    console.log("user not found");
     return res.status(401).json({ message: "Username not found" });
   }
 
   //handle login logic
   const match = await bcrypt.compare(password, user.password);
-  console.log(match);
+
   if (match) {
     const accessToken = jwt.sign(
       {
@@ -54,7 +50,7 @@ export const handleLogin = async (req, res) => {
     user.accessToken = accessToken;
     user.refreshToken = refreshToken;
     const result = await user.save();
-    console.log(result);
+
     //creates secure cookie with refresh token
     res.cookie("jwt", refreshToken, {
       domain: ".smrtnews.org",
@@ -67,7 +63,6 @@ export const handleLogin = async (req, res) => {
 
     return res.json({ accessToken });
   } else {
-    console.log("sending status 401");
     return res.sendStatus(401);
   }
 };
@@ -94,7 +89,6 @@ export const handleLogout = async (req, res) => {
   //delete refreshToken
   user.refreshToken = "";
   const result = await user.save();
-  console.log(result);
 
   res.clearCookie("jwt", {
     domain: ".smrtnews.org",
@@ -108,7 +102,7 @@ export const handleLogout = async (req, res) => {
 
 export const handleRefresh = async (req, res) => {
   const cookies = req.cookies;
-  console.log("JWT Cookie", cookies?.jwt);
+
   if (!cookies?.jwt) return res.sendStatus(401);
   const refreshToken = cookies.jwt;
 

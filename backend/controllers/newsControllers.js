@@ -1,6 +1,8 @@
 import { axiosNewsClient } from "../api/axios.js";
 import { CronJob } from "cron";
 import Article from "../models/Article.js";
+import { logEvents } from "../middlewares/logEvents.js";
+import e from "express";
 export const getArticlesByTopic = async (req, res) => {
   try {
     const response = await axiosNewsClient.get("/everything", {
@@ -9,12 +11,12 @@ export const getArticlesByTopic = async (req, res) => {
 
     return res.status(201).json(response.data);
   } catch (error) {
-    console.log(error);
+    logEvents(error, "newsErrorLog.txt");
   }
 };
 
 export const getArticlesOnSchedule = async () => {
-  console.log("Running Schedule");
+  logEvents("Running Schedule", "newsControllerLog.txt");
   const job = CronJob.from({
     cronTime: "*/10 * * * *",
     onTick: async () => {
@@ -25,17 +27,18 @@ export const getArticlesOnSchedule = async () => {
         const data = response.data?.articles;
 
         const result = await Article.insertMany(data, { ordered: false });
-        if (result) console.log("success");
+        if (result)
+          logEvents("getArticleOnSchedule Success", "newsControllerLog.txt");
       } catch (error) {
-        if (error.errorResponse.code === 11000) {
-          console.log("Duplicates Found");
+        if (error.errorResponse?.code === 11000) {
+          logEvents("Duplicates Found", "newsControllerLog.txt");
 
-          console.log(
-            "Unique Records Found and Inserted:",
-            error.result.insertedIds
+          logEvents(
+            `Unique Records Found and Inserted: ${error.result.insertedIds}`,
+            "newsControllerLog.txt"
           );
         } else {
-          console.log(error);
+          logEvents(error, "newsErrorLog.txt");
         }
       }
     },

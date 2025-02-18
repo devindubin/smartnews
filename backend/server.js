@@ -1,6 +1,6 @@
 import "dotenv/config";
 import express from "express";
-import { logger } from "./middlewares/logEvents.js";
+import { logEvents, logger } from "./middlewares/logEvents.js";
 import authRouter from "./routes/authRouter.js";
 import postRouter from "./routes/postRouter.js";
 import newsRouter from "./routes/newsRouter.js";
@@ -13,6 +13,7 @@ import { credentials } from "./middlewares/credentials.js";
 import { verifyJWT } from "./middlewares/verifyJWT.js";
 import { getArticlesOnSchedule } from "./controllers/newsControllers.js";
 import path from "path";
+import { findMissingCronJob } from "./workers/articleParsing.js";
 
 const __dirname = import.meta.dirname;
 const app = express();
@@ -21,13 +22,14 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 getArticlesOnSchedule();
+findMissingCronJob();
 
 // app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.set("trust proxy", 1);
 app.use(credentials);
 app.use(
   cors({
-    origin: "https://www.smrtnews.org",
+    origin: "http://localhost:5173",
     optionsSuccessStatus: 200,
   })
 );
@@ -37,7 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.get("/", (req, res) => {
   if (req.headers?.accept?.includes("text/html")) {
-    res.send("Hello World");
+    res.send("Hello World!");
   } else {
     res.json({ message: "Hello World" });
   }
@@ -56,8 +58,8 @@ app.all("*", (req, res) => {
 app.use(errorHandler);
 
 mongoose.connection.once("open", () => {
-  console.log("Connected to MongoDB");
+  logEvents("Connected to MongoDB", "coreLog.txt");
   app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    logEvents(`Server running on http://localhost:${PORT}`, "coreLog.txt");
   });
 });

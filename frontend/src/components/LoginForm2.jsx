@@ -29,7 +29,6 @@ const LoginForm2 = () => {
         formik.resetForm();
         navigate("/feed");
       } else {
-        console.log(err);
         setErrMsg(err?.message);
       }
     },

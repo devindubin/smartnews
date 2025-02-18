@@ -1,0 +1,4 @@
+20250217	18:06:14	333c62b9-7682-40c7-a719-8f64fd0c5d11	MongooseError: Operation `articles.insertMany()` buffering timed out after 10000ms
+20250217	18:08:31	93405505-4ba9-432c-a2f1-25e732348471	MongooseError: Operation `articles.insertMany()` buffering timed out after 10000ms
+20250217	18:15:01	adfd5569-7eb1-4b79-b2d7-3973486be49c	MongooseError: Operation `articles.insertMany()` buffering timed out after 10000ms
+20250217	18:17:50	37542863-4392-4d65-ae0c-496da2b0e6ce	MongooseError: Operation `articles.insertMany()` buffering timed out after 10000ms

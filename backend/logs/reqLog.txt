@@ -507,3 +507,12 @@
 20250213	14:14:18	44aaf339-63d0-4399-a04d-5aa2533ec06b	GET	undefined	/feed
 20250213	14:14:18	6741cb35-6316-44df-ab08-3e43d1c7169e	GET	undefined	/favicon.ico
 20250213	14:14:28	df4bd82f-df6c-4051-a660-ee1f52aa9bc1	GET	undefined	/favicon.ico
+20250217	17:26:33	fa35328d-d25a-45f0-9614-2d30edcddb2f	GET	undefined	/
+20250217	17:26:34	a9e8b079-6c11-4686-8b9a-1f80d47ddd1f	GET	undefined	/favicon.ico
+20250217	17:27:34	b25ee182-6806-49fe-aab5-bd9b7480ec4c	GET	undefined	/
+20250217	17:27:34	abd95875-3559-4aba-9da5-5a8fea0aa3c5	GET	undefined	/favicon.ico
+20250218	17:49:52	0e4ee215-9472-4dec-a2af-5f7e2ac4e838	POST	http://localhost:5173	/auth/login
+20250218	17:50:54	1d73dbef-3834-436c-8568-a4da5bc52b63	POST	http://localhost:5173	/auth/login
+20250218	17:51:48	9e2315b7-6783-4057-8d1f-c7940cf7c664	POST	http://localhost:5173	/auth/login
+20250218	17:51:48	ad089ca0-a5d7-42ac-8168-465a94ffdc35	GET	http://localhost:5173	/news/articles
+20250218	17:55:27	cd3b09c5-ad1a-40f0-ba86-5d0219d8bc99	GET	http://localhost:5173	/auth/refresh
