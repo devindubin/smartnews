@@ -21,7 +21,7 @@ services:
       source: /*
       destination: /
 
-  - type: web_service
+  - type: web
     name: backend
     env: docker
     region: oregon
