@@ -53,8 +53,9 @@ export const handleLogin = async (req, res) => {
     const result = await user.save();
 
     //creates secure cookie with refresh token
+
     res.cookie("jwt", refreshToken, {
-      domain: ".smrtnews.org",
+      domain: process.env.COOKIE_HOST,
       partition: true,
       httpOnly: true,
       secure: true,
