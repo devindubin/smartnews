@@ -10,16 +10,15 @@ services:
     dockerContext: ./frontend
     dockerfilePath: ./frontend/Dockerfile
     envVars:
-      key: NODE_ENV
-      value: production
+      - key: NODE_ENV
+        value: production
     autoDeploy: true
     healthCheckPath: /
-    ports:
-      - 5173
+    
     routes:
-      type: rewrite
-      source: /*
-      destination: /
+      - type: rewrite
+        source: /*
+        destination: /
 
   - type: web
     name: backend
@@ -32,17 +31,12 @@ services:
     dockerContext: ./backend
     dockerfilePath: ./backend/Dockerfile
     envVars:
-      key: NODE_ENV
-      value: production
+      - key: NODE_ENV
+        value: production
     autoDeploy: true
     healthCheckPath: /
-    ports:
-      - 5000
-    dependsOn:
-      - name: mongo
-        type: database
-      - name: bullmq
-        type: keyvalue
+   
+   
   - type: keyvalue
     name: bullmq
     ipAllowList: # Allow external connections from everywhere
