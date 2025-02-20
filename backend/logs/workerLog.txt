@@ -375,3 +375,108 @@
 20250218	17:55:24	2aed200a-471e-4d1c-a621-5980d6313e38	Article Count with Missing Text: 0
 20250218	17:56:00	06bd2f85-209c-48ac-b840-f230dd2705d5	Starting findMissing()
 20250218	17:56:00	8ab627dc-45aa-4459-a9d4-1e504f005890	Article Count with Missing Text: 0
+20250218	18:20:14	5b9b1913-8688-415a-8a90-5f7c149880d5	Starting findMissing()
+20250218	18:20:14	b0d2af86-8945-45b3-9f16-506365d9da84	Running Article Text Parsing Worker
+20250218	18:20:24	b52c4f04-b77e-47d8-bcb8-77cb8f59a267	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:26:29	cb3bf823-433e-4637-a3d0-3e6a3e3425b9	Running Article Text Parsing Worker
+20250218	18:26:29	564a76c2-b8b0-4dac-9959-62b23133724b	Starting findMissing()
+20250218	18:26:39	86726819-caf6-4e69-a024-aa414d12ddcc	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:30:46	47e3d49d-1c98-4d06-9e37-dc05fc275708	Running Article Text Parsing Worker
+20250218	18:30:46	063cbdd8-f0ef-4247-aafc-45cd61526864	Starting findMissing()
+20250218	18:30:56	f8c0b5a3-4ce7-4467-ba8f-adf33421c540	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:32:00	efd4e02b-d171-4590-9cb5-b1a5a68e3779	Starting findMissing()
+20250218	18:32:10	8a01f102-d517-4d99-b981-c65279dabb6e	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:38:14	b001224f-0a9c-4faa-943c-8f81133ecd89	Running Article Text Parsing Worker
+20250218	18:38:14	76fc7565-2e0d-49d0-bedb-60204110efab	Starting findMissing()
+20250218	18:38:24	dc31a0cd-3c41-44c6-b6e2-cef93f90f3f8	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:40:00	e9bfe641-94c8-4278-9ec7-a63adbb81788	Starting findMissing()
+20250218	18:40:10	5c21f47f-ec91-4c4a-8b7f-dbe62fab333e	Error Enqueing Records: MongooseError: Operation `articles.find()` buffering timed out after 10000ms
+20250218	18:43:08	7a27ed6f-6e75-474f-b20d-067972e48600	Running Article Text Parsing Worker
+20250218	18:43:08	5fd564cd-4bbf-4d91-84a5-133c7dd3d2f6	Starting findMissing()
+20250218	18:43:08	77630dd6-9e6f-4cc0-b98c-f14f1e0b9301	Article Count with Missing Text: 0
+20250220	17:53:47	030bae38-d22e-4098-9c66-3e1108c5b8f3	Starting findMissing()
+20250220	17:53:47	14410d1c-cdd5-4f32-a015-1e3f5730180b	Running Article Text Parsing Worker
+20250220	17:53:47	134a1dc1-116a-4075-9685-13cfdb3541f8	Article Count with Missing Text: 6
+20250220	17:53:47	0b596b4c-de66-427d-be0c-4964b282218f	Article Found: https://www.scientificamerican.com/article/the-elusive-brain-science-of-aha-moments/
+20250220	17:53:47	d20ae340-a824-48d4-85a1-41eea519bb35	Article Found: https://www.scientificamerican.com/article/poem-origins-positrons/
+20250220	17:53:47	59cb1780-86a2-48f3-a013-49b3570cd2cf	Article Found: https://www.scientificamerican.com/article/science-history-from-50-100-and-150-years-ago/
+20250220	17:53:47	9b351dbd-a849-4c75-be46-8504fc8a4986	Article Found: https://www.wired.com/story/national-science-foundation-february-2025-firings/
+20250220	17:53:47	f1cd09fb-40bd-4239-9546-c0f4558c4e25	Article Found: https://www.npr.org/2025/02/18/nx-s1-5301049/national-science-foundation-fires-roughly-10-of-its-workforce
+20250220	17:53:47	24fe61c5-4a3b-4502-afb1-8c3dd9d357ef	Article Found: https://www.bbc.com/news/articles/c337nmlyxn2o
+20250220	17:53:48	7fe44518-d0e4-41e8-8da1-af6b5862ca5a	67b60f82a14f6d3b82d72c0d Completed	1
+20250220	17:53:48	3166d117-887d-4d95-a89c-be513515fbcb	67b60f82a14f6d3b82d72c1c Completed	2
+20250220	17:53:48	b84932a9-8173-487e-be3d-1a18e1fd0a60	67b60f82a14f6d3b82d72c22 Completed	3
+20250220	17:53:48	92fe7a77-c0fa-4c76-891a-502196de11dc	67b6232804df6fe927fd56b4 Completed	4
+20250220	17:53:48	50a28bca-f511-42af-89cd-3dcd472c48a1	67b6d3d972cffa9015b10885 Completed	5
+20250220	17:53:49	037c0eef-1294-438a-90e2-d3156142e353	67b715bbe3f26f62c413b55f Completed	6
+20250220	17:56:00	a7e02c6f-2557-4852-97b4-1cf786720cbf	Starting findMissing()
+20250220	17:56:00	d18f7f2a-1caa-4d16-94dc-01cdda7090a1	Article Count with Missing Text: 1
+20250220	17:56:00	0eac20ab-cdc7-48f8-87b2-50da00a88936	Article Found: https://www.theverge.com/news/614205/microsoft-quantum-computing-majorana-1-processor
+20250220	17:56:00	f58c6dcb-c815-431e-8e2b-28be29b14435	67b76c2bdc05b44c8f988bc0 Completed	7
+20250220	18:00:00	16ab2c25-8282-4438-8c73-8acafaf60f38	Starting findMissing()
+20250220	18:00:00	dc5baa32-bb57-43cc-b3dc-527207f1f473	Article Count with Missing Text: 0
+20250220	18:10:50	e09c3978-ef97-4a67-8878-f23f44485c44	Running Article Text Parsing Worker
+20250220	18:10:50	bbc44d1d-41ee-4ce5-8a10-01fcfd563b45	Starting findMissing()
+20250220	18:10:50	4b14b6cd-a662-45a2-93c6-50e1f5b069f0	Article Count with Missing Text: 0
+20250220	18:11:26	64868b9c-0800-429e-a6b5-df67ccf59445	Starting findMissing()
+20250220	18:11:26	59fd7e16-c399-4124-b8cf-d3ae0cc9d68c	Running Article Text Parsing Worker
+20250220	18:11:26	0d5210a2-743e-4647-a93f-b7886d385889	Article Count with Missing Text: 0
+20250220	18:13:02	d8fcd5e0-1f49-4b77-8a0e-e8a6bb675d19	Running Article Text Parsing Worker
+20250220	18:13:02	625972c6-b3d6-4d3d-953b-48faa012b7a4	Starting findMissing()
+20250220	18:13:03	7b2d7327-57a5-4702-818d-eaf46ca30691	Article Count with Missing Text: 0
+20250220	18:14:28	5b46a881-aa9d-4da6-b800-350544a849c8	Starting findMissing()
+20250220	18:14:28	bdbf39bc-95a3-4a1f-8183-08b222421453	Running Article Text Parsing Worker
+20250220	18:14:29	ac073f65-9a6d-4d31-b89a-e054c009ede2	Article Count with Missing Text: 0
+20250220	18:16:00	1e74ab15-02f6-48e6-9242-a54c36dca1bd	Starting findMissing()
+20250220	18:16:00	a0eb9ab5-d48b-4fa6-8651-9b579f391052	Article Count with Missing Text: 0
+20250220	18:16:40	99839339-b203-48cf-8e95-bad7f293dcee	Running Article Text Parsing Worker
+20250220	18:16:40	18dfeb0e-99f3-4612-a70f-9c44fb54d40f	Starting findMissing()
+20250220	18:16:40	4c190eea-6926-4381-a8fd-c82d14eb4b84	Article Count with Missing Text: 0
+20250220	18:16:52	ff2ec830-c393-428e-aad5-707e1e066c33	Starting findMissing()
+20250220	18:16:52	984c7ac1-1a2c-4c74-b73a-7ae63cd405f9	Running Article Text Parsing Worker
+20250220	18:16:52	c2916558-c2bc-47d9-a92e-3964b5ac77e1	Article Count with Missing Text: 0
+20250220	18:17:37	2bcf19c7-e9dc-46d2-b9d4-b4a013fdc665	Running Article Text Parsing Worker
+20250220	18:17:37	c53fa793-09e4-4732-88f0-f9e096a44982	Starting findMissing()
+20250220	18:17:38	a4e2d1c9-d359-4975-b442-15ca3ccdc464	Article Count with Missing Text: 0
+20250220	18:17:48	8e01f9e2-80c5-48b7-a77d-f6d8e3c97bfb	Starting findMissing()
+20250220	18:17:48	3964aa23-3f64-4d6f-953e-146cca4ed29b	Running Article Text Parsing Worker
+20250220	18:17:48	200e6bec-12c5-442d-9942-cb713a9dd5ad	Article Count with Missing Text: 0
+20250220	18:18:34	1be5f47b-c12a-40ee-8c17-f3fabf8147ab	Running Article Text Parsing Worker
+20250220	18:18:34	5b03fa40-2c69-460a-857a-3f9d911cfc5b	Starting findMissing()
+20250220	18:18:34	9861cf15-8d77-4d54-93c3-1b4748e9649e	Article Count with Missing Text: 0
+20250220	18:19:15	1b348c63-32d6-47f7-b7f9-1f2b9070edf1	Starting findMissing()
+20250220	18:19:15	4a2fb0de-1dbc-47a1-8f2d-c105654424bc	Running Article Text Parsing Worker
+20250220	18:19:16	3afd69d3-f085-4dee-92cc-a19e0e599073	Article Count with Missing Text: 0
+20250220	18:21:44	3eceb19e-61ae-439c-859d-f8cb1cf69e95	Running Article Text Parsing Worker
+20250220	18:21:44	bef6febe-1f9d-4ddc-b095-107a5dc77c10	Starting findMissing()
+20250220	18:21:44	f420a486-7427-4169-8460-a2accb11ccbb	Article Count with Missing Text: 0
+20250220	18:22:06	b67b0cf5-cbeb-4058-a7e8-76ccf328b65c	Starting findMissing()
+20250220	18:22:06	351b88dc-5289-4e70-9499-0431318981cc	Running Article Text Parsing Worker
+20250220	18:22:07	6db1839d-e4e7-4663-9751-13d51102a05d	Article Count with Missing Text: 0
+20250220	18:23:23	e58b78c6-4a53-4f8b-a5e8-44774bab53da	Running Article Text Parsing Worker
+20250220	18:23:23	f597d189-4ea6-4cce-9ef3-3723c73de830	Starting findMissing()
+20250220	18:23:23	d77ae424-d713-40e6-aae4-25f1c619892d	Article Count with Missing Text: 0
+20250220	18:23:36	321ed8e4-72e0-4a8c-8cb9-035cc4cd88b0	Running Article Text Parsing Worker
+20250220	18:23:36	e6770228-a90e-4f47-903c-6754df5a69fa	Starting findMissing()
+20250220	18:23:36	32df654b-8236-4a27-8ad7-67c0a0134fac	Article Count with Missing Text: 0
+20250220	18:24:00	c53bb770-8d52-45bd-becf-57e9110fd16e	Starting findMissing()
+20250220	18:24:00	a7b8d31f-0930-46cf-a15e-01827033a9ba	Article Count with Missing Text: 0
+20250220	18:24:36	1b6b33e8-8a6e-44e0-967d-1245d0bca1c9	Starting findMissing()
+20250220	18:24:36	5dabb1e3-b74a-43c3-a836-c3f84e109bae	Running Article Text Parsing Worker
+20250220	18:24:36	cb7916bc-26c1-4baf-8211-9ede8ac3ffab	Article Count with Missing Text: 0
+20250220	18:24:52	4ebe1db9-26b1-43e9-b559-4330c596b905	Running Article Text Parsing Worker
+20250220	18:24:52	703ae9ad-ca8a-4036-9da6-d46d41be8296	Starting findMissing()
+20250220	18:24:53	f73e5f0d-3020-4a46-af48-8621b4cdf7f0	Article Count with Missing Text: 0
+20250220	18:25:27	ce5664e9-1ccf-4087-bf5c-f8d5b544c658	Running Article Text Parsing Worker
+20250220	18:25:27	7e16cd26-637f-4ed5-8e83-23a86cbce478	Starting findMissing()
+20250220	18:25:28	b5475964-8935-4950-bded-548bdc84650f	Article Count with Missing Text: 0
+20250220	18:28:13	b28bf8c3-33c6-43e6-abb3-4d377f609196	Running Article Text Parsing Worker
+20250220	18:28:13	970811c0-6831-4151-a537-fc233966b7d8	Starting findMissing()
+20250220	18:28:13	cd73c40b-00ff-432f-a94f-c41e2f93d70f	Article Count with Missing Text: 0
+20250220	18:29:45	c9f2483c-1985-41d9-b5ee-9bed960db436	Running Article Text Parsing Worker
+20250220	18:29:45	dc30a912-9042-4a25-a267-830e2a7c287f	Starting findMissing()
+20250220	18:29:46	8fcd0f2e-7467-49c4-9e81-5721f495f8e0	Article Count with Missing Text: 0
+20250220	18:32:00	8178e9e5-6828-439e-b5d7-094f90cd834d	Starting findMissing()
+20250220	18:32:00	d9ea4576-ddfa-40f3-82f8-d0b70eb49675	Article Count with Missing Text: 0
+20250220	18:40:00	e788678f-024d-4342-8cf1-19ed84ffd3b3	Starting findMissing()
+20250220	18:40:00	cf7b00b3-87a5-40b7-b01e-eba7a958cf47	Article Count with Missing Text: 0

@@ -40,12 +40,13 @@ export const handleLogin = async (req, res) => {
         username: user.username,
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: process.env.ACCESS_EXP }
+      { expiresIn: "15m" }
     );
+
     const refreshToken = jwt.sign(
       { username: user.username },
       process.env.REFRESH_SECRET_KEY,
-      { expiresIn: process.env.REFRESH_EXP }
+      { expiresIn: "1d" }
     );
     user.accessToken = accessToken;
     user.refreshToken = refreshToken;
