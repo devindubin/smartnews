@@ -5,8 +5,7 @@ services:
     region: oregon
     plan: free
     branch: main
-    buildCommand: npm install && npm run build
-    startCommand: npm run start -- --host
+  
     dockerContext: ./frontend
     dockerfilePath: ./frontend/Dockerfile
     envVars:
@@ -26,8 +25,7 @@ services:
     region: oregon
     plan: free
     branch: main
-    buildCommand: npm install
-    startCommand: npm start
+
     dockerContext: ./backend
     dockerfilePath: ./backend/Dockerfile
     envVars:
