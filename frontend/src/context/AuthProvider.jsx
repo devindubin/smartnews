@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log(response);
+
       result = response;
     } catch (error) {
       err = error.response.data;
@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
-      console.log(response);
+
       result = response;
     } catch (error) {
       err = error.response.data;

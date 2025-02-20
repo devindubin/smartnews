@@ -1,3 +1,4 @@
+// import { logEvents } from "../../../backend/middlewares/logEvents";
 import axios from "../api/axios";
 import { useAuth } from "./useAuth";
 
@@ -11,6 +12,7 @@ const useLogout = () => {
         withCredentials: true,
       });
     } catch (error) {
+      // logEvents(error, "hooksLog.txt");
       console.log(error);
     }
   };

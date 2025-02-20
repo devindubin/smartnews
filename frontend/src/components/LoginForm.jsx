@@ -13,7 +13,6 @@ const LoginForm = () => {
     e.preventDefault();
     const data = { username, password };
     const { result, err } = await login({ data });
-    console.log(result);
 
     if (result?.status == 200) {
       const accessToken = result?.data?.accessToken;
@@ -23,7 +22,6 @@ const LoginForm = () => {
 
       navigate("/feed");
     } else {
-      console.log(err);
       setErrMsg(err?.message);
     }
   };

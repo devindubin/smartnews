@@ -1,0 +1,95 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mern-app
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - redis_data:/data
+    networks:
+      - mern-app
+  
+  
+  
+  api:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: 
+      # - ./backend/.env
+      - ./backend/${ENV_FILE}
+    # secrets:
+    #   - db_conn_string
+    #   - access_exp
+    #   - refresh_exp
+    #   - refresh_secret
+    #   - access_secret
+    #   - news_api_key
+    #   - tna_api_key
+    # # environment:
+    #   DB_CONNECTION_STRING_FILE: /run/secrets/db_conn_string
+    #   ACCESS_TOKEN_SECRET: /run/secrets/access_secret
+    #   REFRESH_SECRET_KEY: /run/secrets/refresh_secret
+    #   ACCESS_EXP: /run/secrets/access_exp
+    #   REFRESH_EXP: /run/secrets/refresh_exp
+    #   NEWS_API_KEY: /run/secrets/news_api_key
+    #   NEWS_API_URL: "https://newsapi.org/v2"
+    #   TNA_API_KEY: /run/secrets/tna_api_key
+    volumes: 
+      - ./backend:/backend
+      - /backend/node_modules
+    ports:
+      - 5000:5000
+    networks:
+      - mern-app
+    depends_on:
+      - mongo
+      - redis
+    
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./frontend:/app
+      - /frontend/node_modules
+    networks:
+      - mern-app
+    ports:
+      - 5173:5173
+    command: npm run dev -- --host
+    depends_on:
+      - api
+
+volumes:
+  mongo_data:
+  redis_data:
+networks:
+  mern-app:
+    driver: bridge
+# secrets:
+#   db_conn_string:
+#     file: ./secrets/DB_CONNECTION_STRING.txt
+#   access_exp:
+#     file: ./secrets/ACCESS_EXP.txt
+#   refresh_exp:
+#     file: ./secrets/REFRESH_EXP.txt
+#   refresh_secret:
+#     file: ./secrets/REFRESH_SECRET_KEY.txt
+#   access_secret:
+#     file: ./secrets/ACCESS_TOKEN_SECRET.txt
+#   news_api_key:
+#     file: ./secrets/NEWS_API_KEY.txt
+#   tna_api_key:
+#     file: ./secrets/TNA_API_KEY.txt

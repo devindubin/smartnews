@@ -18,7 +18,7 @@ const RegisterForm = () => {
       password,
     };
     const { result, err } = await register({ data });
-    console.log(result);
+
     if (result.statusText == "OK") {
       setSuccess(true);
     } else {

@@ -4,10 +4,9 @@ import { useNews } from "../../hooks/useNews";
 const ArticleModal = () => {
   const { articles } = useNews();
   const { id } = useParams();
-  console.log("Length of article list", articles.length);
 
   const data = articles.filter((article) => article.id === id)[0];
-  console.log("data", data);
+
   let content = undefined;
   if (!data) {
     content = (
@@ -25,7 +24,7 @@ const ArticleModal = () => {
       </div>
     );
   }
-  console.log(content);
+
   return content;
 };
 

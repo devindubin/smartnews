@@ -1,18 +1,1 @@
-{"scripts": {
-  "renderbuild": "npm install && cd frontend/ && npm install && cd .. && cd backend/ && npm install && cd ..",
-  "vitebuild": "cd frontend/ && npm run build && cd ..",
-  "prodstart": "cd backend/ && npm run start",
-  "localprod": "cd frontend/ && npm run build && cd .. && cd backend/ && npm run start"
-},
-  "dependencies": {
-    "axios": "^1.7.9",
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "date-fns": "^4.1.0",
-    "dotenv": "^16.4.7",
-    "jsonwebtoken": "^9.0.2",
-    "uuid": "^11.0.5",
-    "vite": "^6.0.5"
-
-  }
-}
+{"scripts":{"renderbuild":"npm install && cd frontend/ && npm install && cd .. && cd backend/ && npm install && cd ..","vitebuild":"cd frontend/ && npm run build && cd ..","prodstart":"cd backend/ && npm run start","localprod":"cd frontend/ && npm run build && cd .. && cd backend/ && npm run start"},"dependencies":{"axios":"^1.7.9","bcrypt":"^5.1.1","cors":"^2.8.5","date-fns":"^4.1.0","dotenv":"^16.4.7","jsonwebtoken":"^9.0.2","redis":"^4.7.0","uuid":"^11.0.5","vite":"^6.0.5"}}

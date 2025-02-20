@@ -19,28 +19,6 @@ const articleSchema = new mongoose.Schema({
   content: String,
 });
 
-articleSchema.post("insertMany", async (docs) => {
-  console.log("running post save");
-  try {
-    docs.map(async (doc) => {
-      console.log(doc._id);
-      const response = await axios.get(doc.url);
-      const dom = new JSDOM(response.data, { url: doc.url });
-      const articleObj = new Readability(dom.window.document).parse();
-      if (articleObj?.textContent) {
-        const text = articleObj.textContent.trim();
-        const result = await mongoose
-          .model("article")
-          .findByIdAndUpdate(doc._id, { rawText: text });
-      } else {
-        console.log("RawText PArse Failed");
-      }
-    });
-  } catch (error) {
-    console.log(error);
-  }
-});
-
 const Article = mongoose.model("article", articleSchema);
 
 export default Article;

@@ -6,26 +6,30 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "bullmq": "node workers/articleParsing.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "date-fns": "^4.1.0",
     "@mozilla/readability": "^0.5.0",
+    "axios": "^1.7.9",
+    "bcrypt": "^5.1.1",
+    "bullmq": "^5.41.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "cron": "^3.5.0",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "ioredis": "^5.5.0",
     "jsdom": "^26.0.0",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.13.0",
     "mongoose": "^8.9.6",
-    "axios": "^1.7.9",
-    "jsonwebtoken": "^9.0.2",
-    "uuid": "^11.0.5",
-    "bcrypt": "^5.1.1"
+    "redis": "^4.7.0",
+    "uuid": "^11.0.5"
   },
   "prettier": {}
 }
