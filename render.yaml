@@ -14,10 +14,10 @@ services:
     autoDeploy: true
     healthCheckPath: /
     
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /
+    # routes:
+    #   - type: rewrite
+    #     source: /*
+    #     destination: /
 
   - type: web
     name: backend
