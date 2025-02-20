@@ -41,13 +41,15 @@ services:
     dependsOn:
       - name: mongo
         type: database
-      - name: redis
-        type: redis
+      - name: bullmq
+        type: keyvalue
+  - type: keyvalue
+    name: bullmq
+    ipAllowList: # Allow external connections from everywhere
+    - source: 0.0.0.0/0
+      description: everywhere
 databases:
   - name: mongo
     region: oregon
     plan: free
 
-  - name: redis
-    region: oregon
-    plan: free
