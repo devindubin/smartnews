@@ -1,0 +1,53 @@
+services
+  type: web
+  name: frontend
+  env: docker
+  region: oregon
+  plan: free
+  branch: main
+  buildCommand: npm install && npm run build
+  startCommand: npm run start -- --host
+  dockerContext: ./frontend
+  dockerfilePath: ./frontend/Dockerfile
+  envVars:
+    key: NODE_ENV
+    value: production
+  autoDeploy: true
+  healthCheckPath: /
+  ports:
+    - 5173
+  routes:
+    type: rewrite
+    source: /*
+    destination: /
+
+  type: web_service
+  name: backend
+  env: docker
+  region: oregon
+  plan: free
+  branch: main
+  buildCommand: npm install
+  startCommand: npm start
+  dockerContext: ./backend
+  dockerfilePath: ./backend/Dockerfile
+  envVars:
+    key: NODE_ENV
+    value: production
+  autoDeploy: true
+  healthCheckPath: /
+  ports:
+    - 5000
+  dependsOn:
+    - name: mongo
+      type: database
+    - name: redis
+      type: redis
+databased:
+  - name: mongo
+    region: oregon
+    plan: free
+
+  - name: redis
+    region: oregon
+    plan: free
