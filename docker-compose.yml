@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
     env_file: 
       # - ./backend/.env
-      - ./backend/${ENV_FILE}
+      - ./backend/${ENV_FILE:-.env.development}
     # secrets:
     #   - db_conn_string
     #   - access_exp
